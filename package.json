@@ -1,0 +1,29 @@
+{
+  "name": "react-native-smartlocation",
+  "version": "0.0.1",
+  "description": "Smart Location library for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mavenave/react-native-smartlocation.git"
+  },
+  "keywords": [
+    "location",
+    "react-native",
+    "gps",
+    "geolocation"
+  ],
+  "author": "mavenave <guanhao3797@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mavenave/react-native-smartlocation/issues"
+  },
+  "dependencies": {
+    "react": "15.2.1",
+    "react-native": "0.30.0"
+  },
+  "homepage": "https://github.com/mavenave/react-native-smartlocation#readme"
+}
