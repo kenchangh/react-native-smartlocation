@@ -1,6 +1,6 @@
 {
   "name": "react-native-smartlocation",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Smart Location library for React Native",
   "main": "index.js",
   "scripts": {
