@@ -32,15 +32,30 @@ public class SmartLocationModule extends ReactContextBaseJavaModule {
         return "SmartLocation";
     }
 
+    private class Status {
+        private boolean value = false;
+        public void setToTrue() {
+            value = true;
+        }
+        public boolean getVal() {
+            return value;
+        }
+    }
+
     @ReactMethod
     public void getCurrentLocation(final Promise promise) {
+        final Status resolved = new Status();
         SmartLocation.with(mReactContext).location()
                 .oneFix()
                 .start(new OnLocationUpdatedListener() {
                     @Override
                     public void onLocationUpdated(Location location) {
-                        WritableMap locationMap = new Position(location).serializeToMap();
-                        promise.resolve(locationMap);
+                        // somehow a oneFix() runs twice O.o
+                        if (!resolved.getVal()) {
+                            WritableMap locationMap = new Position(location).serializeToMap();
+                            resolved.setToTrue();
+                            promise.resolve(locationMap);
+                        }
                     }
                 });
     }
