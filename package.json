@@ -21,9 +21,5 @@
   "bugs": {
     "url": "https://github.com/mavenave/react-native-smartlocation/issues"
   },
-  "dependencies": {
-    "react": "15.2.1",
-    "react-native": "0.30.0"
-  },
   "homepage": "https://github.com/mavenave/react-native-smartlocation#readme"
 }
