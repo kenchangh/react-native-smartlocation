@@ -26,8 +26,11 @@ function onLocationUpdate(cb: (pos: Position) => void) {
   SmartLocation.onLocationUpdate();
 }
 
+function getCurrentLocation(): Promise {
+  return SmartLocation.getCurrentLocation();
+}
+
 const {
-  getCurrentLocation,
   getLocationState,
   stopListeningForLocationUpdates,
 } = SmartLocation;
